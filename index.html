@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2f064f">
+
+  <title>Açaí do Chef | Açaí Artesanal em Bebedouro</title>
+
+  <meta name="description" content="Açaí do Chef - Açaí artesanal com entrega gratuita em todos os bairros de Eldorado. Componha o seu açaí, sorvete e copo fondue e peça pelo WhatsApp.">
+
+  <!-- Open Graph (og:image DEVE ser URL absoluta) -->
+  <meta property="og:title" content="Açaí do Chef | Açaí Artesanal em Bebedouro">
+  <meta property="og:description" content="Entrega gratuita em todos os bairros de Eldorado. Componha o seu açaí do seu jeito e peça pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://SEUDOMINIO.com.br/">
+  <meta property="og:image" content="https://SEUDOMINIO.com.br/imagem/logo.png">
+
+  <link rel="icon" type="image/png" href="imagem/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ============================================================
+     SPRITE DE ÍCONES SVG
+     ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+
+  <symbol id="ic-whatsapp" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.38-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.07-.13-.27-.2-.57-.35Z"/>
+    <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.96L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.02h-.01c-1.5 0-2.98-.4-4.27-1.17l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.24-8.13 8.24Z"/>
+  </symbol>
+
+  <symbol id="ic-instagram" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M16.5 3h-9A4.5 4.5 0 0 0 3 7.5v9A4.5 4.5 0 0 0 7.5 21h9a4.5 4.5 0 0 0 4.5-4.5v-9A4.5 4.5 0 0 0 16.5 3Z"/>
+    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <circle cx="16.6" cy="7.4" r="1.1" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="ic-pin" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+    <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  </symbol>
+
+  <symbol id="ic-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3.5 2"/>
+  </symbol>
+
+  <symbol id="ic-google" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M22.5 12.23c0-.79-.07-1.54-.2-2.27H12v4.3h5.88a5.03 5.03 0 0 1-2.18 3.3v2.75h3.52c2.06-1.9 3.28-4.7 3.28-8.08Z"/>
+    <path fill="#34A853" d="M12 23c2.95 0 5.43-.98 7.24-2.65l-3.53-2.74c-.98.66-2.23 1.05-3.71 1.05-2.85 0-5.27-1.92-6.13-4.51H2.22v2.83A11 11 0 0 0 12 23Z"/>
+    <path fill="#FBBC05" d="M5.87 14.15a6.6 6.6 0 0 1 0-4.22V7.1H2.22a11 11 0 0 0 0 9.88l3.65-2.83Z"/>
+    <path fill="#EA4335" d="M12 5.44c1.6 0 3.05.55 4.19 1.64l3.13-3.13C17.43 2.2 14.95 1.14 12 1.14A11 11 0 0 0 2.22 7.1l3.65 2.83C6.73 7.34 9.15 5.44 12 5.44Z"/>
+  </symbol>
+
+  <symbol id="ic-fruta" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 7c-3.5-2.5-8 0-8 4.5C4 16 8.5 21 12 21s8-5 8-9.5C20 7 15.5 4.5 12 7Z"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 7V3M12 3c1.8 0 3-1 3-1M12 3c-1.5 0-2.5-.8-2.5-.8"/>
+  </symbol>
+
+  <symbol id="ic-topping" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16l-1.1 8.1a2 2 0 0 1-2 1.9H7.1a2 2 0 0 1-2-1.9L4 11Z"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3.5 11c1.6-1.2 3-.4 4.2 0 1.2.4 2.4.4 3.6 0 1.2-.4 2.6-1.2 4.2 0 .9.7 1.9.7 3 0"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 7.2c0-1.6 1.6-3 1.6-3s1.6 1.4 1.6 3a1.6 1.6 0 0 1-3.2 0Z"/>
+    <path fill="currentColor" d="M8.6 14.6h1.6v1.6H8.6zM13.4 16.4H15V18h-1.6zM10.6 17.6h1.4V19h-1.4z"/>
+  </symbol>
+
+  <symbol id="ic-creme" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6 10h12l-1.4 9.2a2 2 0 0 1-2 1.8H9.4a2 2 0 0 1-2-1.8L6 10Z"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6.5 10a5.5 5.5 0 0 1 11 0"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 4.5V2.8"/>
+  </symbol>
+
+  <symbol id="ic-extra" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m12 3 2.1 4.9L19 10l-4.9 2.1L12 17l-2.1-4.9L5 10l4.9-2.1L12 3Z"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M18.5 16.5 19 18l1.5.5-1.5.5-.5 1.5-.5-1.5L16.5 18l1.5-.5.5-1Z"/>
+  </symbol>
+
+</svg>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header">
+  <div class="header-inner">
+
+    <a href="#inicio" class="logo">
+      <span class="logo-badge">
+        <img src="imagem/logo.png" alt="Açaí do Chef" class="logo-icon" width="48" height="48">
+      </span>
+    </a>
+
+    <nav class="nav" id="menu-principal">
+      <a href="#inicio" class="active">Início</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#fundue">Copo Fondue</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+
+      <a href="#cardapio" class="nav-badge">
+        <svg class="btn-ic btn-ic-sm" aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+        Montar Pedido
+      </a>
+    </nav>
+
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="inicio">
+  <div class="container hero-inner">
+
+    <div class="hero-text">
+      <span class="badge">Entrega gratuita em todos os bairros</span>
+
+      <h1>O verdadeiro sabor do <span>açaí artesanal</span> em Bebedouro</h1>
+
+      <p>
+        Uma seleção cuidadosa de frutas frescas, cremes especiais e
+        acompanhamentos nobres, preparados à sua maneira. Peça pelo
+        WhatsApp e receba em poucos minutos, no conforto de sua casa.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#cardapio" class="btn btn-primary">
+          <svg class="btn-ic" aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+          Montar meu Açaí
+        </a>
+
+        <a href="#fundue" class="btn btn-secondary">Conhecer o Copo Fondue</a>
+
+      </div>
+
+
+      <div class="hero-info">
+        <div class="info-item">
+          <svg class="info-ic" aria-hidden="true" focusable="false"><use href="#ic-clock"></use></svg>
+          <span>Todos os dias, das 14h às 23h</span>
+        </div>
+
+        <div class="info-item">
+          <svg class="info-ic" aria-hidden="true" focusable="false"><use href="#ic-pin"></use></svg>
+          <span>Rua Cério Galdo, 660 · Eldorado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="hero-circle"></div>
+      <!-- RENOMEIE o arquivo para foto-chef1.png (sem espaços!) -->
+      <img src="/imagem/banner1-acai.png" alt="Copo de açaí montado do Açaí do Chef" fetchpriority="high">
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SOBRE / DIFERENCIAIS ==================== -->
+<section class="sobre" id="sobre">
+  <div class="container">
+
+    <div class="section-title">
+      <span class="badge">Nossos Diferenciais</span>
+      <h2>A Experiência <span>Açaí do Chef</span></h2>
+      <p>
+        Cada detalhe é pensado com esmero, do preparo à entrega, para
+        oferecer sabor, textura e qualidade em seu mais alto padrão.
+      </p>
+    </div>
+
+    <div class="sobre-inner">
+
+      <div class="sobre-card destaque-card">
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v8"/>
+            <path d="M8 12h8"/>
+          </svg>
+        </div>
+        <h3>Frutas Selecionadas</h3>
+        <p>
+          Selecionadas diariamente em seu ponto ideal de maturação,
+          garantindo o frescor e a qualidade que seu pedido merece.
+        </p>
+        <span class="card-line"></span>
+      </div>
+
+      <div class="sobre-card destaque-card">
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <h3>Entrega Expressa</h3>
+        <p>
+          Delivery ágil e gratuito para todos os bairros de Eldorado,
+          preservando a textura e a temperatura ideais do seu açaí.
+        </p>
+        <span class="card-line"></span>
+      </div>
+
+      <div class="sobre-card destaque-card">
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3>Ingredientes Nobres</h3>
+        <p>
+          Chocolates de alta pureza, cremes artesanais aveludados e
+          toppings de marcas consagradas compõem cada receita.
+        </p>
+        <span class="card-line"></span>
+      </div>
+
+      <div class="sobre-card destaque-card">
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Padrão de Excelência</h3>
+        <p>
+          Receita exclusiva, com controle rigoroso de qualidade em
+          cada etapa, reconhecida por mais de 1.700 clientes em Bebedouro.
+        </p>
+        <span class="card-line"></span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CARDÁPIO / MONTE SEU AÇAÍ ================= -->
+<section class="cardapio" id="cardapio">
+  <div class="container">
+
+    <div class="section-title">
+      <span class="badge">Cardápio</span>
+      <h2>Componha o seu <span>Açaí</span></h2>
+      <p>
+        Escolha o tamanho, as frutas, os cremes e os adicionais — e envie
+        seu pedido pronto direto para o nosso WhatsApp.
+      </p>
+    </div>
+
+    <form id="monte-acai" novalidate>
+
+      <p class="passo-label">1. Escolha o tamanho</p>
+
+      <div class="tamanhos-grid" id="grupo-tamanho">
+
+        <div class="tamanho-card" data-tamanho="300ml" data-preco="17.00" data-gratis="3" role="button" tabindex="0" aria-pressed="false">
+          <span class="card-header-badge">Tradicional</span>
+          <span class="ml-badge">300ml</span>
+          <div class="preco-wrapper">
+            <span class="cifrao">R$</span>
+            <span class="preco-valor">17</span>
+            <span class="preco-centavos">,00</span>
+          </div>
+          <p class="card-sub">Perfeito para um momento de prazer rápido</p>
+          <div class="card-features">
+            <div class="feature-item"><span>✔</span> 3 acompanhamentos grátis</div>
+            <div class="feature-item"><span>✔</span> Açaí natural 100%</div>
+            <div class="feature-item"><span>✔</span> Copo reforçado</div>
+          </div>
+          <span class="btn-card seletor-tamanho">Selecionar</span>
+        </div>
+
+        <div class="tamanho-card" data-tamanho="500ml" data-preco="22.00" data-gratis="4" role="button" tabindex="0" aria-pressed="false">
+          <span class="tag-top">Mais Pedido</span>
+          <span class="card-header-badge">Família</span>
+          <span class="ml-badge">500ml</span>
+          <div class="preco-wrapper">
+            <span class="cifrao">R$</span>
+            <span class="preco-valor">22</span>
+            <span class="preco-centavos">,00</span>
+          </div>
+          <p class="card-sub">A escolha preferida de nossos clientes</p>
+          <div class="card-features">
+            <div class="feature-item highlight"><span>✔</span> 4 acompanhamentos grátis</div>
+            <div class="feature-item"><span>✔</span> Açaí natural 100%</div>
+            <div class="feature-item"><span>✔</span> Copo reforçado</div>
+          </div>
+          <span class="btn-card btn-card-gold seletor-tamanho">Selecionar</span>
+        </div>
+
+        <div class="tamanho-card" data-tamanho="700ml" data-preco="28.00" data-gratis="4" role="button" tabindex="0" aria-pressed="false">
+          <span class="card-header-badge">Super</span>
+          <span class="ml-badge">700ml</span>
+          <div class="preco-wrapper">
+            <span class="cifrao">R$</span>
+            <span class="preco-valor">28</span>
+            <span class="preco-centavos">,00</span>
+          </div>
+          <p class="card-sub">Para compartilhar ou se presentear</p>
+          <div class="card-features">
+            <div class="feature-item"><span>✔</span> 4 acompanhamentos grátis</div>
+            <div class="feature-item"><span>✔</span> Açaí natural 100%</div>
+            <div class="feature-item"><span>✔</span> Copo reforçado</div>
+          </div>
+          <span class="btn-card seletor-tamanho">Selecionar</span>
+        </div>
+
+      </div>
+
+      <!-- SABORES DE SORVETES -->
+      <div class="cardapio-bloco">
+        <div class="bloco-header">
+          <span class="bloco-icon">
+            <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#ic-topping"></use></svg>
+          </span>
+          <div>
+            <h3>Sabores de Sorvetes</h3>
+            <p>Selecione conforme seu gosto</p>
+            <p class="bloco-contador" data-contador="sorvetes" role="status" aria-live="polite">
+              Escolha até 2 sabores
+            </p>
+          </div>
+        </div>
+
+        <div class="tags-list" data-grupo="sorvetes" data-max="2">
+          <button type="button" class="tag-item" data-nome="Morango com Calda" aria-pressed="false">Morango com Calda</button>
+          <button type="button" class="tag-item" data-nome="Ninho Trufado" aria-pressed="false">Ninho Trufado</button>
+          <button type="button" class="tag-item" data-nome="Choconutella" aria-pressed="false">Choconutella</button>
+        </div>
+      </div>
+
+      <!-- ACOMPANHAMENTOS -->
+      <div class="cardapio-bloco">
+        <div class="bloco-header">
+          <span class="bloco-icon">
+            <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#ic-topping"></use></svg>
+          </span>
+          <div>
+            <h3>Acompanhamentos</h3>
+            <p>Selecione conforme seu gosto para o dia de hoje</p>
+            <p class="bloco-contador" data-contador="acompanhamentos" role="status" aria-live="polite">
+              Escolha o tamanho do copo para liberar as opções
+            </p>
+          </div>
+        </div>
+
+          <div class="tags-list" data-grupo="acompanhamentos">
+    <button type="button" class="tag-item" data-nome="Leite condensado" aria-pressed="false">Leite condensado</button>
+    <button type="button" class="tag-item" data-nome="Leite ninho" aria-pressed="false">Leite ninho</button>
+    <button type="button" class="tag-item" data-nome="Paçoca" aria-pressed="false">Paçoca</button>
+    <button type="button" class="tag-item" data-nome="Granola" aria-pressed="false">Granola</button>
+    <button type="button" class="tag-item" data-nome="Confete" aria-pressed="false">Confete</button>
+    <button type="button" class="tag-item" data-nome="Granulado Colorido" aria-pressed="false">Granulado Colorido</button>
+    <button type="button" class="tag-item" data-nome="Ovomaltine" aria-pressed="false">Ovomaltine</button>
+    <button type="button" class="tag-item" data-nome="Farinha láctea" aria-pressed="false">Farinha láctea</button>
+    <button type="button" class="tag-item" data-nome="Chocoboll" aria-pressed="false">Chocoboll</button>
+    <button type="button" class="tag-item" data-nome="Amendoim" aria-pressed="false">Amendoim</button>
+    <button type="button" class="tag-item" data-nome="Gotas de Chocolate" aria-pressed="false">Gotas de Chocolate</button>
+    <button type="button" class="tag-item" data-nome="Mel" aria-pressed="false">Mel</button>
+    <button type="button" class="tag-item" data-nome="Kiwi" aria-pressed="false">Kiwi</button>
+    <button type="button" class="tag-item" data-nome="Morango" aria-pressed="false">Morango</button>
+    <button type="button" class="tag-item" data-nome="Banana" aria-pressed="false">Banana</button>
+    <button type="button" class="tag-item" data-nome="Uva" aria-pressed="false">Uva</button>
+    <button type="button" class="tag-item" data-nome="Calda de Chocolate" aria-pressed="false">Calda de Chocolate</button>
+    <button type="button" class="tag-item" data-nome="Calda de Morango" aria-pressed="false">Calda de Morango</button>
+    <button type="button" class="tag-item" data-nome="Calda de Beijos (Fini)" aria-pressed="false">Calda de Beijos (Fini)</button>
+    <button type="button" class="tag-item" data-nome="Calda de Beijos (Fini)" aria-pressed="false">Calda de Beijos (Fini)</button>
+  </div>
+</div>
+<!-- /ACOMPANHAMENTOS -->
+
+      <!-- FRUTAS -->
+      <div class="cardapio-bloco">
+        <div class="bloco-header">
+          <span class="bloco-icon">
+            <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#ic-fruta"></use></svg>
+          </span>
+          <div>
+            <h3>Frutas</h3>
+            <p>Selecionadas diariamente, no auge do frescor · toque para escolher</p>
+            <p class="bloco-contador" data-contador="frutas" role="status" aria-live="polite">
+              Escolha o tamanho do copo para liberar as opções
+            </p>
+          </div>
+        </div>
+
+        <div class="tags-list" data-grupo="frutas">
+          <button type="button" class="tag-item" data-nome="Morango" aria-pressed="false">Morango</button>
+          <button type="button" class="tag-item" data-nome="Banana" aria-pressed="false">Banana</button>
+          <button type="button" class="tag-item" data-nome="Kiwi" aria-pressed="false">Kiwi</button>
+          <button type="button" class="tag-item" data-nome="Uva" aria-pressed="false">Uva</button>
+        </div>
+      </div>
+
+      <!-- CREMES -->
+      <div class="cardapio-bloco">
+        <div class="bloco-header">
+          <span class="bloco-icon">
+            <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#ic-creme"></use></svg>
+          </span>
+          <div>
+            <h3>Cremes</h3>
+            <p>Aveludados, preparados com ingredientes selecionados · toque para escolher</p>
+            <p class="bloco-contador" data-contador="cremes" role="status" aria-live="polite">
+              Escolha o tamanho do copo para liberar as opções
+            </p>
+          </div>
+        </div>
+
+        <div class="tags-list" data-grupo="cremes">
+          <button type="button" class="tag-item" data-nome="Ninho" aria-pressed="false">Ninho</button>
+          <button type="button" class="tag-item" data-nome="Nutella" aria-pressed="false">Nutella</button>
+          <button type="button" class="tag-item" data-nome="Creme de Paçoca" aria-pressed="false">Creme de Paçoca</button>
+          <button type="button" class="tag-item" data-nome="Prestígio" aria-pressed="false">Prestígio</button>
+          <button type="button" class="tag-item" data-nome="Trufa ao Leite" aria-pressed="false">Trufa ao Leite</button>
+          <button type="button" class="tag-item" data-nome="Chocowaffer Branco" aria-pressed="false">Chocowaffer Branco</button>
+        </div>
+      </div>
+
+      <!-- ADICIONAIS -->
+      <div class="cardapio-bloco">
+        <div class="bloco-header">
+          <span class="bloco-icon">
+            <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#ic-extra"></use></svg>
+          </span>
+          <div>
+            <h3>Adicionais</h3>
+            <p>Toque para incluir no seu pedido (valor à parte)</p>
+          </div>
+        </div>
+
+        <div class="adicionais-grid">
+
+          <div class="adicional-card destaque-adicional">
+            <span class="preco-badge gold">R$ 2,00 cada</span>
+            <h4>Acompanhamentos Especiais</h4>
+            <ul class="lista-adicionais">
+              <li class="adicional-item" data-nome="Granola crocante" data-preco="2.00" role="button" tabindex="0" aria-pressed="false">Granola crocante</li>
+              <li class="adicional-item" data-nome="Leite condensado" data-preco="2.00" role="button" tabindex="0" aria-pressed="false">Leite condensado</li>
+              <li class="adicional-item" data-nome="Confete colorido" data-preco="2.00" role="button" tabindex="0" aria-pressed="false">Confete colorido</li>
+              <li class="adicional-item" data-nome="Leite ninho" data-preco="2.00" role="button" tabindex="0" aria-pressed="false">Leite ninho</li>
+              <li class="adicional-item" data-nome="Oreo" data-preco="2.00" role="button" tabindex="0" aria-pressed="false">Oreo</li>
+              <li class="adicional-item" data-nome="Bis Branco" data-preco="2.00" role="button" tabindex="0" aria-pressed="false">Bis Branco</li>
+              <li class="adicional-item" data-nome="Bis Preto" data-preco="2.00" role="button" tabindex="0" aria-pressed="false">Bis Preto</li>
+            </ul>
+          </div>
+
+
+          <div class="adicional-card">
+            <span class="preco-badge">Toppings Nobres</span>
+            <h4>Extras Premium</h4>
+            <!-- CORRIGIDO: data-preco agora bate com o preço exibido -->
+            <ul class="nobres-list lista-adicionais">
+              <li class="adicional-item" data-nome="Nutella extra"    data-preco="5.00" role="button" tabindex="0" aria-pressed="false">Nutella extra <b>R$ 5,00</b></li>
+              <li class="adicional-item" data-nome="Kit Kat picado"   data-preco="4.00" role="button" tabindex="0" aria-pressed="false">Kit Kat picado <b>R$ 3,00</b></li>
+              <li class="adicional-item" data-nome="Morango"    data-preco="4.00" role="button" tabindex="0" aria-pressed="false">Bombom sonho de valsa <b>R$ 3,00</b></li>
+              <li class="adicional-item" data-nome="Bonbom ouro branco" data-preco="3.00" role="button" tabindex="0" aria-pressed="false">Bombom ouro branco <b>R$ 3,00</b></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <!-- ===== INÍCIO — COPOS DE AÇAÍ EXTRAS (ilimitados) ===== -->
+<div class="copoA-area">
+
+  <div class="copoA-lista" id="copoA-lista"></div>
+
+  <button type="button" class="copoA-add" id="copoA-add">
+    <span class="copoA-add-ic" aria-hidden="true">+</span>
+    <span class="copoA-add-txt">Adicionar outro copo de açaí</span>
+    <span class="copoA-add-tag" id="copoA-add-tag">1 copo</span>
+  </button>
+
+  <div class="copoA-resumo-extra" id="copoA-resumo-extra" hidden>
+    <span class="copoA-resumo-lab">Subtotal dos copos extras</span>
+    <span class="copoA-resumo-val" id="copoA-subtotal">R$ 0,00</span>
+  </div>
+
+</div>
+<!-- ===== FIM — COPOS DE AÇAÍ EXTRAS (ilimitados) ===== -->
+
+
+      <!-- RESUMO DO PEDIDO -->
+      <div class="resumo-pedido" id="resumo-pedido">
+        <h3>Resumo do seu pedido</h3>
+
+        <div class="resumo-linhas" id="resumo-linhas">
+          <p class="resumo-vazio">Escolha o tamanho do seu açaí para começar.</p>
+        </div>
+
+        <!-- QUANTIDADE DE COPOS -->
+        <div class="quantidade-bloco">
+          <span class="campo-label">
+            <svg class="campo-label-ic" aria-hidden="true" focusable="false"><use href="#ic-extra"></use></svg>
+            Quantos copos iguais a este?
+          </span>
+          <div class="quantidade-stepper" id="quantidade-stepper">
+            <button type="button" class="qtd-btn" id="qtd-menos" aria-label="Diminuir quantidade">−</button>
+            <span class="qtd-valor" id="qtd-valor" aria-live="polite">1</span>
+            <button type="button" class="qtd-btn" id="qtd-mais" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+        <!-- /QUANTIDADE DE COPOS -->
+
+        <div class="resumo-total">
+          <span>Total</span>
+          <span id="resumo-valor-total">R$ 0,00</span>
+        </div>
+
+        <!-- DADOS PARA ENTREGA -->
+        <div class="entrega-bloco">
+
+          <div class="campo-entrega">
+            <label for="input-endereco" class="campo-label">
+              <svg class="campo-label-ic" aria-hidden="true" focusable="false"><use href="#ic-pin"></use></svg>
+              Endereço de entrega
+            </label>
+            <textarea
+              id="input-endereco"
+              class="input-endereco"
+              rows="2"
+              placeholder="Rua, número, bairro, complemento e ponto de referência"
+              aria-describedby="aviso-endereco"
+            ></textarea>
+          </div>
+
+          <div class="campo-entrega">
+            <span class="campo-label">
+              <svg class="campo-label-ic" aria-hidden="true" focusable="false"><use href="#ic-extra"></use></svg>
+              Forma de pagamento
+            </span>
+            <div class="formas-pagamento" id="grupo-pagamento" role="group" aria-label="Forma de pagamento">
+              <button type="button" class="forma-item" data-forma="Pix" aria-pressed="false">Pix</button>
+              <button type="button" class="forma-item" data-forma="Cartão (na entrega)" aria-pressed="false">Cartão (na entrega)</button>
+              <button type="button" class="forma-item" data-forma="Dinheiro" aria-pressed="false">Dinheiro</button>
+            </div>
+          </div>
+
+        </div>
+        <!-- /DADOS PARA ENTREGA -->
+
+        <button type="button" id="btn-enviar-pedido" class="btn btn-primary btn-enviar-pedido" disabled>
+          <svg class="btn-ic" aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+          Enviar Pedido pelo WhatsApp
+        </button>
+
+        <p class="resumo-obs">
+          Confirme o endereço e a forma de pagamento acima antes de enviar — tudo já vai pronto para o WhatsApp.
+        </p>
+      </div>
+
+    </form>
+
+  </div>
+</section>
+
+<!-- ============================ FONDUE ============================ -->
+<section class="fundue" id="fundue">
+  <div class="container fundue-inner">
+
+    <div class="fundue-text">
+      <span class="badge badge-light">Exclusivo</span>
+
+      <h2>Copo <span class="txt-amarelo">Fondue</span></h2>
+
+      <p>
+        Um copo generoso de açaí cremoso, coberto com chocolate quente
+        derretido na hora e finalizado com os toppings de sua preferência.
+        Uma experiência completa, do primeiro ao último gole de colher.
+      </p>
+
+      <div class="fundue-preco">R$ 26,00</div>
+
+      <div class="fundue-detalhes">
+        <div class="detalhe-item">
+          <h4>Tamanho</h4>
+          <p>300ml de açaí cremoso</p>
+        </div>
+        <div class="detalhe-item">
+          <h4>Ideal para</h4>
+          <p>Compartilhar ou se presentear</p>
+        </div>
+      </div>
+
+      <!-- ===== INÍCIO — ADIÇÃO COPO FONDUE (montagem) ===== -->
+<div class="copo2-montagem">
+
+  <!-- CREMES DO FONDUE -->
+  <div class="cardapio-bloco copo2-bloco">
+    <div class="bloco-header">
+      <span class="bloco-icon">
+        <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#ic-creme"></use></svg>
+      </span>
+      <div>
+        <h3>Creme do Fondue</h3>
+        <p>O chocolate quente que cobre o seu copo · toque para escolher</p>
+        <p class="bloco-contador" data-copo2-contador="cremes" role="status" aria-live="polite">
+          Escolha 1 creme
+        </p>
+      </div>
+    </div>
+
+    <div class="tags-list" data-copo2-grupo="cremes" data-copo2-max="1">
+      <button type="button" class="tag-item" data-copo2-nome="Chocolate ao Leite" aria-pressed="false">Chocolate ao Leite</button>
+      <button type="button" class="tag-item" data-copo2-nome="Chocolate Branco" aria-pressed="false">Chocolate Branco</button>
+      <button type="button" class="tag-item" data-copo2-nome="Chocolate Meio Amargo" aria-pressed="false">Chocolate Meio Amargo</button>
+      <button type="button" class="tag-item" data-copo2-nome="Nutella" aria-pressed="false">Nutella</button>
+      <button type="button" class="tag-item" data-copo2-nome="Ninho" aria-pressed="false">Ninho</button>
+      <button type="button" class="tag-item" data-copo2-nome="Prestígio" aria-pressed="false">Prestígio</button>
+    </div>
+  </div>
+
+  <!-- FRUTAS DO FONDUE -->
+  <div class="cardapio-bloco copo2-bloco">
+    <div class="bloco-header">
+      <span class="bloco-icon">
+        <svg width="28" height="28" aria-hidden="true" focusable="false"><use href="#ic-fruta"></use></svg>
+      </span>
+      <div>
+        <h3>Frutas</h3>
+        <p>Frescas do dia, para mergulhar no chocolate · toque para escolher</p>
+        <p class="bloco-contador" data-copo2-contador="frutas" role="status" aria-live="polite">
+          Escolha até 3 frutas
+        </p>
+      </div>
+    </div>
+
+    <div class="tags-list" data-copo2-grupo="frutas" data-copo2-max="3">
+      <button type="button" class="tag-item" data-copo2-nome="Morango" aria-pressed="false">Morango</button>
+      <button type="button" class="tag-item" data-copo2-nome="Banana" aria-pressed="false">Banana</button>
+      <button type="button" class="tag-item" data-copo2-nome="Kiwi" aria-pressed="false">Kiwi</button>
+      <button type="button" class="tag-item" data-copo2-nome="Uva" aria-pressed="false">Uva</button>
+    </div>
+  </div>
+
+  <!-- RESUMO DO COPO FONDUE -->
+  <div class="copo2-resumo" id="copo2-resumo">
+    <h3>Resumo do seu Copo Fondue</h3>
+
+    <div class="copo2-linhas" id="copo2-linhas">
+      <p class="copo2-vazio">Escolha o creme para começar a montar.</p>
+    </div>
+
+    <div class="quantidade-bloco copo2-qtd-bloco">
+      <span class="campo-label">
+        <svg class="campo-label-ic" aria-hidden="true" focusable="false"><use href="#ic-extra"></use></svg>
+        Quantos copos fondue?
+      </span>
+      <div class="quantidade-stepper">
+        <button type="button" class="qtd-btn" id="copo2-qtd-menos" aria-label="Diminuir quantidade">−</button>
+        <span class="qtd-valor" id="copo2-qtd-valor" aria-live="polite">1</span>
+        <button type="button" class="qtd-btn" id="copo2-qtd-mais" aria-label="Aumentar quantidade">+</button>
+      </div>
+    </div>
+
+    <div class="copo2-total">
+      <span>Total</span>
+      <span id="copo2-valor-total">R$ 26,00</span>
+    </div>
+
+    <button type="button" id="copo2-enviar" class="btn btn-primary copo2-btn-enviar" disabled>
+      <svg class="btn-ic" aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+      Enviar Copo Fondue pelo WhatsApp
+    </button>
+  </div>
+
+</div>
+<!-- ===== FIM — ADIÇÃO COPO FONDUE (montagem) ===== -->
+
+<!-- ===== INÍCIO — COPOS FONDUE EXTRAS (ilimitados) ===== -->
+<div class="copoX-area">
+
+  <div class="copoX-lista" id="copoX-lista"></div>
+
+  <button type="button" class="copoX-add" id="copoX-add">
+    <span class="copoX-add-ic" aria-hidden="true">+</span>
+    <span class="copoX-add-txt">Adicionar outro Copo Fondue</span>
+    <span class="copoX-add-tag" id="copoX-add-tag">1 copo</span>
+  </button>
+
+  <div class="copoX-final">
+    <div class="copo2-total copoX-total">
+      <span>Total geral do pedido</span>
+      <span id="copoX-total">R$ 26,00</span>
+    </div>
+    <button type="button" id="copoX-enviar" class="btn btn-primary copo2-btn-enviar" disabled>
+      <svg class="btn-ic" aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+      Enviar Pedido Completo pelo WhatsApp
+    </button>
+  </div>
+
+</div>
+<!-- ===== FIM — COPOS FONDUE EXTRAS (ilimitados) ===== -->
+
+
+      <a href="https://wa.me/5517988134154" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <svg class="btn-ic" aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+        Pedir Copo Fondue
+      </a>
+    </div>
+
+    <div class="fundue-image">
+      <div class="fundue-circle"></div>
+      <div class="fundue-img-wrapper">
+        <!-- CORRIGIDO: caminho relativo (sem barra inicial) -->
+        <img src="imagem/copofounde.png" alt="Copo Fondue do Açaí do Chef" loading="lazy">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================= DEPOIMENTOS ========================= -->
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+
+    <div class="section-title">
+      <span class="badge">Depoimentos</span>
+      <h2>A opinião de <span>quem já provou</span></h2>
+      <p>Mais de 1.700 clientes satisfeitos em Eldorado e região.</p>
+    </div>
+
+    <div class="depoimentos-grid">
+
+      <div class="depoimento-card">
+        <div class="depoimento-topo">
+          <span class="depoimento-foto" data-inicial="M">
+            <img src="imagem/mariana.png" alt="Foto de Mariana Alves" loading="lazy">
+          </span>
+          <div class="depoimento-autor">
+            <strong>Mariana Alves</strong>
+            <span class="depoimento-data">
+              <svg aria-hidden="true" focusable="false"><use href="#ic-google"></use></svg>
+              Avaliação no Google
+            </span>
+          </div>
+        </div>
+        <div class="depoimento-estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>&ldquo;O melhor açaí de Eldorado — entrega rápida e sempre muito bem caprichado.&rdquo;</p>
+      </div>
+
+      <div class="depoimento-card">
+        <div class="depoimento-topo">
+          <span class="depoimento-foto" data-inicial="R">
+            <img src="imagem/rafael.png" alt="Foto de Rafael Souza" loading="lazy">
+          </span>
+          <div class="depoimento-autor">
+            <strong>Rafael Souza</strong>
+            <span class="depoimento-data">
+              <svg aria-hidden="true" focusable="false"><use href="#ic-google"></use></svg>
+              Avaliação no Google
+            </span>
+          </div>
+        </div>
+        <div class="depoimento-estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>&ldquo;Peço toda semana. A qualidade é sempre impecável e o atendimento, nota dez.&rdquo;</p>
+      </div>
+
+      <div class="depoimento-card">
+        <div class="depoimento-topo">
+          <span class="depoimento-foto" data-inicial="J">
+            <img src="imagem/juliana.png" alt="Foto de Juliana Ribeiro" loading="lazy">
+          </span>
+          <div class="depoimento-autor">
+            <strong>Juliana Ribeiro</strong>
+            <span class="depoimento-data">
+              <svg aria-hidden="true" focusable="false"><use href="#ic-google"></use></svg>
+              Avaliação no Google
+            </span>
+          </div>
+        </div>
+        <div class="depoimento-estrelas" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+        <p>&ldquo;O copo fondue é sensacional — recomendo a quem aprecia uma boa sobremesa.&rdquo;</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================== CONTATO =========================== -->
+<section class="contato" id="contato">
+  <div class="container">
+
+    <div class="section-title light">
+      <span class="badge">Contato</span>
+      <h2>Fale Conosco</h2>
+      <p>Estamos à disposição para atender seu pedido</p>
+    </div>
+
+    <div class="contato-grid">
+
+      <a href="https://wa.me/5517988134154" target="_blank" rel="noopener noreferrer" class="contato-card">
+        <span class="contato-icon">
+          <svg aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+        </span>
+        <h3>WhatsApp</h3>
+        <p>(17) 98813-4154</p>
+      </a>
+
+      <!-- CORRIGIDO: &amp; no lugar de & solto na URL -->
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+C%C3%A9rio+Galdo+660+Eldorado+Bebedouro" target="_blank" rel="noopener noreferrer" class="contato-card">
+        <span class="contato-icon">
+          <svg aria-hidden="true" focusable="false"><use href="#ic-pin"></use></svg>
+        </span>
+        <h3>Endereço</h3>
+        <p>Rua Cério Galdo, 660 - Eldorado</p>
+      </a>
+
+      <div class="contato-card">
+        <span class="contato-icon">
+          <svg aria-hidden="true" focusable="false"><use href="#ic-clock"></use></svg>
+        </span>
+        <h3>Horário</h3>
+        <p>Todos os dias, 14h às 23h</p>
+      </div>
+
+      <a href="https://www.instagram.com/acaidochef_01?igsh=emRiM2pvNTRobXRl" target="_blank" rel="noopener noreferrer" class="contato-card">
+        <span class="contato-icon">
+          <svg aria-hidden="true" focusable="false"><use href="#ic-instagram"></use></svg>
+        </span>
+        <h3>Instagram</h3>
+        <p>@acaidochef_01</p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container footer-inner">
+
+    <div class="footer-logo">
+      <img src="imagem/logo.png" alt="" class="footer-logo-img" width="40" height="40">
+      <h3>Açaí do <span>Chef</span></h3>
+    </div>
+
+    <p>Açaí natural com entrega em Bebedouro/SP</p>
+    <p>Rua Cério Galdo, 660 - Eldorado, Bebedouro/SP</p>
+
+    <div class="footer-social">
+      <a href="https://wa.me/5517988134154" target="_blank" rel="noopener noreferrer">
+        <svg aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+        WhatsApp
+      </a>
+      <a href="https://www.instagram.com/acaidochef_01?igsh=emRiM2pvNTRobXRl" target="_blank" rel="noopener noreferrer">
+        <svg aria-hidden="true" focusable="false"><use href="#ic-instagram"></use></svg>
+        Instagram
+      </a>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; 2026 Açaí do Chef. Todos os direitos reservados.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ===================== WHATSAPP FLUTUANTE ===================== -->
+<a href="https://wa.me/5517988134154" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Pedir pelo WhatsApp">
+  <svg aria-hidden="true" focusable="false"><use href="#ic-whatsapp"></use></svg>
+</a>
+
+<script src="script.js" defer></script>
+</body>
+</html>
